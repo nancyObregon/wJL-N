@@ -1,0 +1,346 @@
+/* App.css RESPONSIVE */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Great+Vibes&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f1e8;
+  font-family: "Cormorant Garamond", serif;
+  overflow-x: hidden;
+}
+
+.app {
+  width: 100%;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+  background: #f5f1e8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+
+  padding: 4rem 8%;
+}
+
+.hero-left,
+.hero-right {
+  flex: 1;
+}
+
+.flower-image {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: auto;
+}
+
+.hero-right {
+  text-align: center;
+}
+
+.hero-right h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1.1;
+  color: #4b6647;
+}
+
+.hero-right span {
+  color: #b7d7e7;
+}
+
+.hero-right h2 {
+  margin-top: 1rem;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  color: #313623;
+}
+
+.hero-right p {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: #555;
+}
+
+.hero-right button {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+
+  background: #314020;
+  color: white;
+
+  border: none;
+
+  font-size: 1rem;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.hero-right button:hover {
+  transform: scale(1.05);
+}
+
+/* SAVE THE DATE */
+
+.save-date {
+  min-height: 100vh;
+
+  background: #b8d6e4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+
+  padding: 4rem 8%;
+}
+
+.photo-card {
+  width: 320px;
+  height: 450px;
+
+  border-radius: 200px;
+  overflow: hidden;
+
+  flex-shrink: 0;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.save-center {
+  text-align: center;
+}
+
+.save-center h2 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: #313623;
+}
+
+.mini-flower {
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+
+.save-center p {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: #313623;
+}
+
+/* DETAILS */
+
+.details {
+  min-height: 100vh;
+
+  background: #2a3818;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+
+  padding: 4rem 8%;
+}
+
+.timeline {
+  width: 20%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  font-size: 1.1rem;
+}
+
+.dress-code {
+  width: 60%;
+  text-align: center;
+}
+
+.dress-code h3 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.dress-code p {
+  margin-top: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.colors {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 1.5rem;
+
+  margin: 4rem 0;
+}
+
+.colors span {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.blue {
+  background: #00257d;
+}
+
+.gold {
+  background: #d4a037;
+}
+
+.orange {
+  background: #b1542d;
+}
+
+.light {
+  background: #c9dfeb;
+}
+
+.red {
+  background: #8f1111;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  margin-top: 5rem;
+}
+
+.info h4 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.info p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.flowers-side {
+  width: 20%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 5rem;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .hero,
+  .save-date,
+  .details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .timeline,
+  .dress-code,
+  .flowers-side {
+    width: 100%;
+  }
+
+  .timeline {
+    align-items: center;
+  }
+
+  .info {
+    flex-direction: column;
+  }
+
+  .photo-card {
+    width: 280px;
+    height: 400px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .hero,
+  .save-date,
+  .details {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero {
+    gap: 2rem;
+  }
+
+  .save-date {
+    gap: 2rem;
+  }
+
+  .photo-card {
+    width: 220px;
+    height: 320px;
+    border-radius: 140px;
+  }
+
+  .colors span {
+    width: 55px;
+    height: 55px;
+  }
+
+  .timeline {
+    font-size: 1rem;
+  }
+
+  .flowers-side {
+    font-size: 3rem;
+  }
+
+  .hero-right button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* EXTRA SMALL */
+
+@media (max-width: 480px) {
+  .hero-right h1 {
+    line-height: 1.2;
+  }
+
+  .save-center h2 {
+    line-height: 1;
+  }
+
+  .photo-card {
+    width: 180px;
+    height: 260px;
+  }
+
+  .colors {
+    gap: 1rem;
+  }
+
+  .colors span {
+    width: 45px;
+    height: 45px;
+  }
+
+  .timeline {
+    gap: 1.2rem;
+  }
+}
