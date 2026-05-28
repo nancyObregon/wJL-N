@@ -1,6 +1,10 @@
 /* App.css — Nancy & José Luis · Mobile-first para WhatsApp */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Great+Vibes&family=Cinzel:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap'); /*Option1*/
+@import url('https://fonts.googleapis.com/css2?family=Updock&display=swap'); /*Option2*/
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap'); /*Option3*/
+
 
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,13 +32,6 @@ img { display: block; max-width: 100%; }
   gap: 0;
 }
 
-.hero-flowers--left {
-  width: 70%;
-  max-width: 220px;
-  margin-bottom: -1rem; /* overlap effect */
-}
-.hero-flowers--left svg { width: 100%; height: auto; }
-
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -52,15 +49,20 @@ img { display: block; max-width: 100%; }
 }
 
 .name-script {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3.6rem;
+  /* font-family: "Parisienne", cursive; */
+  font-family: "Updock", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   color: #2D4A35;
+  font-size: 8rem;
   line-height: 1.15;
+  /*font-family: 'Great Vibes', cursive;*/
 }
 
 .ampersand {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2.2rem;
+  font-family: "Imperial Script", cursive;
+  font-size: 6rem;
   color: #B8D4E8;
   line-height: 1;
 }
@@ -158,7 +160,7 @@ img { display: block; max-width: 100%; }
   line-height: 1.15;
 }
 
-.flower-small { width: 52px; height: auto; }
+.flower-small { width: 150px; height: auto; }
 
 .save-date {
   font-family: 'Great Vibes', cursive;
@@ -440,7 +442,7 @@ img { display: block; max-width: 100%; }
     gap: 0;
     width: 100%;
   }
-  .hero-flowers--left {
+  .hero-flowers--left  {
     width: 100%;
     max-width: none;
     margin-bottom: 0;
@@ -449,7 +451,7 @@ img { display: block; max-width: 100%; }
     justify-content: center;
     padding: 3rem 2rem 3rem 6vw;
   }
-  .hero-flowers--left svg { width: 100%; max-width: 460px; height: auto; }
+  .hero-flowers--left img { width: 100%; max-width: 460px; height: auto; }
 
   .hero-content {
     width: 100%;
@@ -481,7 +483,7 @@ img { display: block; max-width: 100%; }
   .save-center        { order: 2; grid-column: 2; grid-row: 1; gap: 0.8rem; }
   .save-photo--dogs   { order: 3; grid-column: 3; grid-row: 1; justify-self: start; width: clamp(160px, 18vw, 260px); aspect-ratio: 3/4; }
   .save-title { font-size: clamp(2rem, 3vw, 3rem); letter-spacing: 0.12em; }
-  .flower-small { width: 70px; }
+  .flower-small { width: 150px; }
   .save-date  { font-size: clamp(2.4rem, 3.5vw, 3.5rem); }
   .save-time  { font-size: clamp(1.2rem, 1.8vw, 1.6rem); }
 
