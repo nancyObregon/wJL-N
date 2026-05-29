@@ -3,7 +3,8 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - main   # cada push a main dispara el deploy
+      - main
+  workflow_dispatch:   # opcional: permite correrlo manualmente
 
 permissions:
   contents: write
@@ -13,22 +14,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      # 1. Clona el repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2. Configura Node
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
+      # 3. Instala dependencias
       - name: Install dependencies
         run: npm install
 
+      # 4. Build del proyecto
       - name: Build project
         run: npm run build
 
-      - name: Deploy to gh-pages
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          npx gh-pages -d build
+      # 5. Deploy a gh-pages ✅ (la parte importante)
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
