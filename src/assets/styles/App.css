@@ -252,6 +252,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* Agenda — tarjetas grandes */
+
 .agenda-column { width: 100%; }
 
 .section-label {
@@ -312,6 +313,93 @@ img { display: block; max-width: 100%; }
   color: #F5F0E6;
   font-weight: 400;
   line-height: 1.2;
+}
+/* ───── TIMELINE WRAPPER ───── */
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+/* línea vertical */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #d4af37; /* dorado */
+  opacity: 0.5;
+}
+
+/* cada item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* punto */
+.timeline-dot {
+  position: absolute;
+  left: -31px;
+  top: 32px;
+
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #d4af37;
+
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
+}
+
+/* card */
+.timeline-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  height: 90px; /* 👈 todos iguales */
+  padding: 16px 20px;
+
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+
+  transition: all 0.3s ease;
+}
+
+/* hover elegante */
+.timeline-card:hover {
+  transform: translateX(6px);
+  background: rgba(255,255,255,0.12);
+}
+
+/* icono */
+.timeline-icon {
+  width: 60px;
+  height: 80px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+/* info */
+.timeline-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* hora */
+.timeline-time {
+  font-size: 20px;
+  color: #d4af37;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+/* label */
+.timeline-label {
+  font-size: 18px;
+  color: white;
 }
 
 /* Flor decorativa en mobile: oculta, reaparece en desktop */

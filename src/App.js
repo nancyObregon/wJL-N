@@ -1,10 +1,16 @@
 // App.js
 import "./assets/styles/App.css";
+import { motion } from "framer-motion";
 import img1 from "./assets/img/AyN.jpeg";
 import img2 from "./assets/img/JLyN.jpeg";
 import fl1 from "./assets/img/flor1.png";
 import fl2 from "./assets/img/flor2.png";
 import fl3 from "./assets/img/flor3.png";
+import A1 from "./assets/img/A1.png"
+import A2 from "./assets/img/A2.png"
+import A3 from "./assets/img/A3.png"
+import A4 from "./assets/img/A4.png"
+import A5 from "./assets/img/A5.png"
 
 const DRESS_COLORS = [
   { color: "#1B3A6B", label: "Azul marino" },
@@ -15,14 +21,38 @@ const DRESS_COLORS = [
 ];
 
 const TIMELINE = [
-  { time: "12:00 PM", icon: "🏛️", label: "Recepción" },
-  { time: "13:00 PM", icon: "💍", label: "Ceremonia" },
-  { time: "14:00 PM", icon: "🍽️", label: "Comida" },
-  { time: "15:00 PM", icon: "🥂", label: "Brindis" },
-  { time: "16:00 PM", icon: "📸", label: "Fotos y Despedida" },
+  { time: "12:00 PM", icon: A1, label: "Recepción" },
+  { time: "13:00 PM", icon: A2, label: "Ceremonia" },
+  { time: "14:00 PM", icon: A3, label: "Comida" },
+  { time: "15:00 PM", icon: A4, label: "Brindis" },
+  { time: "16:00 PM", icon: A5, label: "Fotos y Despedida" },
 ];
 
 export default function App() {
+    const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.18 // 👈 efecto cascada
+      }
+    }
+  };
+
+  const item = {
+    hidden: {
+      opacity: 0,
+      y: 30
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <div className="app">
       {/* ── HERO ── */}
@@ -72,17 +102,52 @@ export default function App() {
         <div className="dress-inner">
           <div className="agenda-column">
             <h3 className="section-label">Programa del día</h3>
-            <ol className="agenda-cards">
-              {TIMELINE.map((item) => (
-                <li key={item.time} className="agenda-card">
-                  <span className="agenda-icon">{item.icon}</span>
-                  <div className="agenda-info">
-                    <span className="agenda-time">{item.time}</span>
-                    <span className="agenda-label">{item.label}</span>
-                  </div>
-                </li>
-              ))}
-            </ol>
+              <motion.div
+                className="timeline"
+                variants={container}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+              >
+
+                <motion.div
+                  className="timeline-line"
+                  initial={{ height: 0 }}
+                  whileInView={{ height: "100%" }}
+                  transition={{ duration: 1.2 }}
+                />
+
+                {TIMELINE.map((item, i) => (
+                  <motion.div
+                    key={item.time}
+                    className="timeline-item"
+                    variants={item}
+                  >
+                    <motion.div
+                      className="timeline-dot"
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      transition={{ delay: i * 0.1 }}
+                    />
+
+                    <motion.div
+                      className="timeline-card"
+                      whileTap={{ scale: 0.97 }}
+                    >
+                      <img
+                        src={item.icon}
+                        alt={item.label}
+                        className="timeline-icon"
+                      />
+
+                      <div className="timeline-info">
+                        <span className="timeline-time">{item.time}</span>
+                        <span className="timeline-label">{item.label}</span>
+                      </div>
+                    </motion.div>
+                  </motion.div>
+                ))}
+              </motion.div>
           </div>
 
           <div className="dress-center">
