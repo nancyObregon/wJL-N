@@ -4,25 +4,47 @@ import A3 from "../assets/img/A3.png";
 import A4 from "../assets/img/A4.png";
 import A5 from "../assets/img/A5.png";
 
-export const DRESS_COLORS = [{
-        color: "#1B3A6B",
-        label: "Azul marino"
+export const DRESS_COLORS = [
+    // Tonos cálidos
+    {
+        label: "Terracota",
+        color: "#C97B5A"
     },
     {
-        color: "#C4952A",
-        label: "Dorado"
+        label: "Borgoña",
+        color: "#8B2E1A"
     },
     {
-        color: "#B5501E",
-        label: "Teja"
+        label: "Naranja",
+        color: "#D4874A"
     },
     {
-        color: "#E8D5B0",
-        label: "Crema"
+        label: "Oro antiguo",
+        color: "#AB8A3B"
+    },
+    // Tonos neutros
+    {
+        label: "Lino dorado",
+        color: "#C9A87C"
+    },
+    // Azules
+    {
+        label: "Azul celeste",
+        color: "#7397A8"
+    },
+];
+
+export const AVOID_COLORS = [{
+        label: "Blanco",
+        color: "#FAFAFA"
     },
     {
-        color: "#8B1A2A",
-        label: "Borgoña"
+        label: "Olive green",
+        color: "#53694D"
+    },
+    {
+        label: "Navy",
+        color: "#223348"
     },
 ];
 
