@@ -55,7 +55,7 @@ img { display: block; max-width: 100%; }
   font-weight: 400;
   font-style: normal;
   color: #2D4A35;
-  font-size: 8rem;
+  font-size: 9rem;
   line-height: 1.15;
   /*font-family: 'Great Vibes', cursive;*/
 }
@@ -65,6 +65,7 @@ img { display: block; max-width: 100%; }
   font-size: 6rem;
   color: #B8D4E8;
   line-height: 1;
+  margin: -20px;
 }
 
 .hero-subtitle {
@@ -112,19 +113,20 @@ img { display: block; max-width: 100%; }
 
 .save-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 1.2rem 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 1.5rem;
   max-width: 500px;
   margin: 0 auto;
-  align-items: start;
+
+  justify-items: center; /* 👈 CENTRAR horizontal */
+  align-items: center;   /* 👈 CENTRAR vertical */
 }
 
 .save-photo {
-  width: 100%;
-  min-width: 0;
-  aspect-ratio: 3/4;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  width: 260px;       /* ajusta según tu diseño */
+  height: 360px;  
+  border-radius: 50% / 40%;
   overflow: hidden;
   border: 3px solid #F5F0E6;
   box-shadow: 0 6px 24px rgba(0,0,0,0.18);
@@ -132,8 +134,8 @@ img { display: block; max-width: 100%; }
 
 /* Mobile: fotos arriba (fila 1), texto abajo ocupa las 2 columnas (fila 2) */
 .save-photo--couple { order: 1; grid-column: 1; grid-row: 1; }
-.save-photo--dogs   { order: 2; grid-column: 2; grid-row: 1; }
-.save-center        { order: 3; grid-column: 1 / -1; grid-row: 2; }
+.save-photo--dogs   { order: 3; grid-column: 1; grid-row: 3; }
+.save-center        { order: 2; grid-column: 1 / -1; grid-row: 2; }
 
 .save-photo img {
   width: 100%;
@@ -365,6 +367,10 @@ img { display: block; max-width: 100%; }
   background: rgba(255,255,255,0.06);
 
   transition: all 0.3s ease;
+}
+
+.timeline-card img {
+  width: 25%;
 }
 
 /* hover elegante */
