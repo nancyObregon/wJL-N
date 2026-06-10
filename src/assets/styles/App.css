@@ -49,15 +49,13 @@ img { display: block; max-width: 100%; }
 }
 
 .name-script {
-  /* font-family: "Parisienne", cursive; */
   font-family: "Updock", cursive;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   color: #2D4A35;
-  font-size: 9rem;
+  font-size: 8rem;
   line-height: 1;
-  /*font-family: 'Great Vibes', cursive;*/
 }
 
 .ampersand {
@@ -80,7 +78,7 @@ img { display: block; max-width: 100%; }
   font-size: 1.3rem;
   font-weight: 300;
   color: #5A5040;
-  line-height: 1.6;
+  line-height: 1.7;
   max-width: 28ch;
 }
 
@@ -173,9 +171,9 @@ img { display: block; max-width: 100%; }
 
 .save-time {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1rem;
-  font-weight: 300;
-  letter-spacing: 0.12em;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.10em;
   color: #2D2820;
 }
 
