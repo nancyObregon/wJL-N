@@ -26,8 +26,9 @@ export default function Location() {
         </p>
 
         <motion.a
-          href="https://wa.me/528129411474?text=Hola,%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda.%20💒%20Respondo:%20✅%20SI%20/%20❌%20NO"
+          href="https://wa.me/528129411474?text=Hola%20💙✨%20Nos%20encantará%20celebrar%20contigo%20nuestro%20gran%20día%20💒%0A%0AConfirma%20tu%20asistencia:%0A✅%20Sí%20asistiré%0A❌%20No%20podré%20asistir%0A%0A¡Gracias%20por%20ser%20parte%20de%20este%20momento%20tan%20especial!%20🍂"
           className="btn-rsvp"
+          target="_blank"
           whileHover={{ scale: 1.05 }}
         >
           Confirmar ✉

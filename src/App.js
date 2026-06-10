@@ -8,7 +8,6 @@ import DressCode from "./components/DressCode";
 import Location from "./components/Location";
 
 export default function App() {
-
   useEffect(() => {
     const handleScroll = () => {
       const y = window.scrollY;
@@ -24,23 +23,18 @@ export default function App() {
     <div className="app">
       <Hero />
       <SaveTheDate />
-      
       <section className="dress-section">
         <div className="dress-inner">
           <div className="agenda-column">
-            <h3 className="section-label">Programa del día</h3>
-            <Timeline />
+            <h3 className="section-label"> Programa del día </h3> <Timeline />
           </div>
-
           <DressCode />
         </div>
-
         <Location />
       </section>
-
       <footer className="footer">
-        <p>Nancy & José Luis · 10·10·2026 · Monterrey</p>
-      </footer>
+        <p> Nancy & José Luis · 10·10·2026 · Monterrey </p>{" "}
+      </footer>{" "}
     </div>
   );
 }
