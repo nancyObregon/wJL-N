@@ -256,7 +256,7 @@ export default function App() {
             </p>
 
             <motion.a
-              href="https://wa.me/528129411474"
+              href="https://wa.me/528129411474?text=Hola,%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda.%20%F0%9F%92%92%20Respondo:%20%E2%9C%85%20SI%20/%20%E2%9D%8C%20NO"
               className="btn-rsvp"
               whileHover={{ scale: 1.05 }}
             >
