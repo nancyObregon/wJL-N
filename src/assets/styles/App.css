@@ -267,55 +267,6 @@ img { display: block; max-width: 100%; }
   text-align: center;
 }
 
-.agenda-cards {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-}
-
-.agenda-card {
-  background: rgba(255,255,255,0.09);
-  border-radius: 10px;
-  padding: 0.9rem 1.1rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  transition: background 0.15s;
-}
-
-.agenda-card:hover {
-  background: rgba(255,255,255,0.14);
-}
-
-.agenda-icon {
-  font-size: 1.8rem;
-  flex-shrink: 0;
-  width: 44px;
-  text-align: center;
-  line-height: 1;
-}
-
-.agenda-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.agenda-time {
-  font-family: 'Cinzel', serif;
-  font-size: 0.78rem;
-  color: #E8C84A;
-  letter-spacing: 0.1em;
-}
-
-.agenda-label {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.25rem;
-  color: #F5F0E6;
-  font-weight: 400;
-  line-height: 1.2;
-}
 /* ───── TIMELINE WRAPPER ───── */
 .timeline {
   position: relative;
